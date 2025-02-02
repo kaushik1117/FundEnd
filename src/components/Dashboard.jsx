@@ -63,7 +63,7 @@ const Dashboard = () => {
             />
             <div className="p-5">
               <h5 className="text-xl font-semibold text-gray-900">{card.name}</h5>
-              <p className="text-sm text-gray-700 mt-2">{card.description}</p>
+              {/* <p className="text-sm text-gray-700 mt-2">{card.description}</p> */}
               <p className="text-gray-500">Funds Received: ${card.fundsReceived} out of ${card.fundsRequired}</p>
 
               {/* Add Progress input form */}
