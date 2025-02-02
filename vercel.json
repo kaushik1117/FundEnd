@@ -16,7 +16,7 @@
         "dest": "/build/$1"
       },
       {
-        "src": "/api/(.*)",          
+        "src": "/backend/(.*)",          
         "dest": "/backend/index.js"
       }
     ]
