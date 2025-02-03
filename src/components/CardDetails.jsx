@@ -11,7 +11,7 @@ const CardDetails = () => {
   useEffect(() => {
     const fetchCardDetails = async () => {
       try {
-        const response = await fetch(`https://fund-end.vercel.app/cards/getcard/${id}`);
+        const response = await fetch(`https://fund-end.vercel.app/api/cards/getcard/${id}`);
         const data = await response.json();
         setCard(data);
       } catch (error) {
@@ -28,7 +28,7 @@ const CardDetails = () => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`https://fund-end.vercel.app/cards/${id}`, {
+      const response = await fetch(`https://fund-end.vercel.app/api/cards/${id}`, {
         method: 'DELETE',
       });
 

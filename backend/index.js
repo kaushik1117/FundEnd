@@ -1,16 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const serverless = require('serverless-http');
-
-
-
-
+const cors = require('cors');
 
 dotenv.config();
-
 const app = express();
-const cors = require('cors');
+
 app.use(cors({
     origin: "https://fund-frontend-alpha.vercel.app/", // Allow frontend domain
     methods: "GET,POST,PUT,DELETE",
@@ -42,13 +37,13 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.send("Welcome to the Crowdfunding API");
 });
-app.use('/cards', cardRoutes);
-app.use('/investments', investmentRoutes);
-app.use('/dashboard', userDashboardRoutes);
-app.use('/users', userRoutes);
+app.use('/api/cards', cardRoutes);
+app.use('/api/investments', investmentRoutes);
+app.use('/api/dashboard', userDashboardRoutes);
+app.use('/api/users', userRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
 });
 
-module.exports.handler = serverless(app);
+
