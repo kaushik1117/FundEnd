@@ -6,11 +6,7 @@ const cors = require('cors');
 dotenv.config();
 const app = express();
 
-app.use(cors({
-    origin: 'https://fund-frontend-alpha.vercel.app/', // Allow frontend domain
-    methods: "GET,POST,PUT,DELETE",
-    credentials: true
-}));
+app.use(cors());
 const PORT = process.env.PORT || 5000;
 
 const MongoClient = require('mongodb').MongoClient;
