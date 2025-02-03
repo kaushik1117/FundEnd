@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 
+const url='https://fund-end.vercel.app'
+
 const CardDetails = () => {
   const { id } = useParams();
   const [card, setCard] = useState(null);
@@ -9,7 +11,7 @@ const CardDetails = () => {
   useEffect(() => {
     const fetchCardDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/cards/getcard/${id}`);
+        const response = await fetch(`https://fund-end.vercel.app/cards/getcard/${id}`);
         const data = await response.json();
         setCard(data);
       } catch (error) {
@@ -26,7 +28,7 @@ const CardDetails = () => {
 
   const handleDelete = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/cards/${id}`, {
+      const response = await fetch(`https://fund-end.vercel.app/cards/${id}`, {
         method: 'DELETE',
       });
 

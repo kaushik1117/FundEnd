@@ -9,7 +9,7 @@ const Investments = () => {
     // Fetch all cards from the backend
     const fetchCards = async () => {
       try {
-        const response = await fetch('http://localhost:5000/investments/donor/Shiva'); // Ensure this is your correct API path
+        const response = await fetch('https://fund-end.vercel.app/investments/donor/Shiva'); // Ensure this is your correct API path
         const data = await response.json();
         setCards(data); // Set the retrieved cards to the state
         console.log(data);

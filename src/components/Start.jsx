@@ -54,7 +54,7 @@ const Start = () => {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/cards/', {
+      const response = await fetch('https://fund-end.vercel.app/cards/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

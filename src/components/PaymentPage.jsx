@@ -32,7 +32,7 @@ const PaymentPage = () => {
 
     try {
       // Send the donation details to the backend
-      const response = await fetch(`http://localhost:5000/cards/${id}/donate`, {
+      const response = await fetch(`https://fund-end.vercel.app/cards/${id}/donate`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

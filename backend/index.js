@@ -4,13 +4,19 @@ const dotenv = require('dotenv');
 const serverless = require('serverless-http');
 
 const cors = require('cors');
-app.use(cors());
+
 
 
 
 dotenv.config();
 
 const app = express();
+const cors = require('cors');
+app.use(cors({
+    origin: "https://fund-frontend.vercel.app", // Allow frontend domain
+    methods: "GET,POST,PUT,DELETE",
+    credentials: true
+}));
 const PORT = process.env.PORT || 5000;
 
 const MongoClient = require('mongodb').MongoClient;
@@ -20,9 +26,7 @@ const cardRoutes = require('./routes/card.js');
 const investmentRoutes = require('./routes/investments.js');
 const userDashboardRoutes = require('./routes/dashboard.js');
 const userRoutes = require('./routes/users.js');
-const cors = require('cors');  
 
-app.use(cors());
 
 // Connect to MongoDB
 mongoose.connect(mongoUrl)

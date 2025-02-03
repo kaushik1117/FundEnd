@@ -8,7 +8,7 @@ const Donate = () => {
   useEffect(() => {
     const fetchCards = async () => {
       try {
-        const response = await fetch('http://localhost:5000/cards/getcards');
+        const response = await fetch('https://fund-end.vercel.app/cards/getcards');
         const data = await response.json();
         setCards(data);
       } catch (error) {

@@ -9,7 +9,7 @@ const Dashboard = () => {
     // Fetch all cards from the backend
     const fetchCards = async () => {
       try {
-        const response = await fetch('http://localhost:5000/dashboard/Shiva/cards'); // Ensure this is your correct API path
+        const response = await fetch('https://fund-end.vercel.app/dashboard/Shiva/cards'); // Ensure this is your correct API path
         const data = await response.json();
         setCards(data); // Set the retrieved cards to the state
         console.log(data);
@@ -26,7 +26,7 @@ const Dashboard = () => {
     if (!progressText.trim()) return; // Prevent empty progress submissions
 
     try {
-      const response = await fetch(`http://localhost:5000/cards/${cardId}/progress`, {
+      const response = await fetch(`https://fund-end.vercel.app/cards/${cardId}/progress`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
