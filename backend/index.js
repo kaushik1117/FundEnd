@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 const cors = require('cors');
 app.use(cors({
-    origin: "https://fund-frontend.vercel.app", // Allow frontend domain
+    origin: "https://fund-frontend-alpha.vercel.app/", // Allow frontend domain
     methods: "GET,POST,PUT,DELETE",
     credentials: true
 }));
