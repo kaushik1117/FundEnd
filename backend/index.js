@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const serverless = require('serverless-http');
 
-const cors = require('cors');
+
 
 
 
