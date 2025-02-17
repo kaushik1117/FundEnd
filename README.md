@@ -1,4 +1,4 @@
-# Full-Stack Project: [Project Name]
+# Full-Stack Project: FundEnd
 
 ## Overview
 This is a full-stack web application built with React (Frontend) and Node.js with Express (Backend). It allows users to create and manage flashcards, make donations, and view details of various campaigns. The project features a dynamic, interactive interface with real-time data fetching and user interactions.
